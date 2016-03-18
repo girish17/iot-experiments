@@ -1,3 +1,10 @@
+/*
+   Using the wiringPi (Gordon Henderson)  and PCD8544 (AdaFruit Industries Inc) libraries for Nokia LCD PCD8544 display.
+
+   Authonr: Girish M
+
+
+*/
 #include <wiringPi.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +18,7 @@ int _rst = 4;
 int _cs = 3;
   
 // lcd contrast 
-int contrast = 80;
+int contrast = 70;
   
 int main (void)
 {
@@ -28,6 +35,9 @@ int main (void)
   // init and clear lcd
   LCDInit(_sclk, _din, _dc, _cs, _rst, contrast);
   LCDclear();
+  delay(1000);
+  LCDdrawstring(0,0,"wiping...");
+  delay(2000);
   LCDdisplay();
   return 0;
 }
