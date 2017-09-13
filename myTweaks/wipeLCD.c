@@ -1,7 +1,7 @@
 /*
    Using the wiringPi (Gordon Henderson)  and PCD8544 (AdaFruit Industries Inc) libraries for Nokia LCD PCD8544 display.
 
-   Authonr: Girish M
+   Author: Girish M
 
 
 */
